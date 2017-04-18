@@ -2,7 +2,7 @@
 ubuntu
 git: 
   $ apt-get install git
-  $ ssh-keygen t rsa -C "MyEmail@qq.com"           //创建ssh key,生成/root/.ssh/id_rsa.pub
+  $ ssh-keygen -t rsa -C "MyEmail@qq.com"           //创建ssh key,生成/root/.ssh/id_rsa.pub
   $ cat /root/.ssh/id_ras.pub                      //copy key值 github.com settings SSH Keys new SSH Key
   
   $ git config --global user.name "your name"      //设置username和email，因为github每次commit都会记录他们
