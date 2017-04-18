@@ -1,0 +1,26 @@
+ 
+ubuntu
+git: 
+  $ apt-get install git
+  $ ssh-keygen t rsa -C "MyEmail@qq.com"           //创建ssh key,生成/root/.ssh/id_rsa.pub
+  $ cat /root/.ssh/id_ras.pub                      //copy key值 github.com settings SSH Keys new SSH Key
+  
+  $ git config --global user.name "your name"      //设置username和email，因为github每次commit都会记录他们
+  $ git config --global user.email "your_email@youremail.com"
+  
+swoole:                 
+  //swoole 需要php php-dev gcc autoconf
+  $ apt-get install php php-dev gcc autoconf
+  
+  $ git clone https://github.com/swoole/swoole-src.git
+  $ cd swoole-src
+  $ phpize                                          //生成./configure
+  $ ./configure
+  $ make
+  $ make install
+  $ php -i|grep php.ini                             //grep path:php.ini
+  $ vi /etc/php/7.0/cli/php.ini                     //添加extension = swoole.so  通过 php -m 验证
+  $ cd examples/
+  $ php server.php                                  //server start
+  
+  
